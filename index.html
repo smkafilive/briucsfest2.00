@@ -20,7 +20,7 @@
         <div class="container nav-container">
             <a href="#" class="logo">
                 <img src="cover.png" alt="BRIU CS FEST Logo" class="logo-img">
-                <div class="logo-text">BRIU CS FEST <span>2.0</span></div>
+                <div class="logo-text">BRIU CS FEST <span class="blink-2">2.0</span></div>
             </a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
@@ -40,12 +40,12 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-content">
-            <h1>BRIU CS FEST 2.0</h1>
+            <h1>BRIU CS FEST <span class="blink-2">2.0</span></h1>
             <p>Empowering Innovation and Creativity - Where Technology Meets Imagination</p>
             <a href="#registration" class="btn">Register Now</a>
             
             <div class="countdown">
-                <div class="countdown-title">Days left for BRIU CS FEST 2.0:</div>
+                <div class="countdown-title">Time Until Festival Begins:</div>
                 <div class="countdown-timer">
                     <div class="countdown-item">
                         <div class="countdown-number" id="days">00</div>
@@ -59,6 +59,10 @@
                         <div class="countdown-number" id="minutes">00</div>
                         <div class="countdown-label">Minutes</div>
                     </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,7 +75,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <div class="university-name">Brahmaputra International University, Jamalpur</div>
-                    <p>BRIU CS FEST 2.0 is the flagship annual Computer Science Festival organized by the prestigious Brahmaputra International University, Jamalpur. This three-day extravaganza brings together the brightest minds in technology, innovation, and creativity to celebrate the limitless possibilities of computer science.</p>
+                    <p>BRIU CS FEST <span class="blink-2">2.0</span> is the flagship annual Computer Science Festival organized by the prestigious Brahmaputra International University, Jamalpur. This three-day extravaganza brings together the brightest minds in technology, innovation, and creativity to celebrate the limitless possibilities of computer science.</p>
                     <p>Our mission is to create an ecosystem that fosters collaboration, knowledge sharing, and groundbreaking innovation. We provide a platform for students, professionals, and tech enthusiasts to showcase their talents, learn from industry experts, and network with like-minded individuals.</p>
                     <p>This year's theme, "Empowering Innovation and Creativity," focuses on how technology can transform ideas into reality, pushing the boundaries of what's possible in fields like artificial intelligence, cybersecurity, data science, and software engineering.</p>
                     
@@ -79,10 +83,6 @@
                         <div class="stat">
                             <div class="stat-number">1000+</div>
                             <div class="stat-label">Participants</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">20+</div>
-                            <div class="stat-label">Universities</div>
                         </div>
                         <div class="stat">
                             <div class="stat-number">30+</div>
@@ -127,7 +127,7 @@
             <div class="registration-content">
                 <h2>Join the Fest</h2>
                 <p>Register now and be a part of the most exciting CS Fest of the year! Don't miss this opportunity to learn, network, and showcase your talents.</p>
-                <a href="#" class="btn">Register Now</a>
+                <a href="#events" class="btn">Register Now</a>
             </div>
         </div>
     </section>
@@ -138,14 +138,23 @@
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-email">
-                        <i class="fas fa-envelope"></i> info@briu-csfest.com
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Facebook</h3>
+                            <p><a href="https://www.facebook.com/briucc" target="_blank">facebook.com/briucc</a></p>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Mobile</h3>
+                            <p>+8801611616044</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,8 +164,13 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="developer-credit">
-                <p>Developed by S.M. KAFI</p>
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 BRIU COMPUTER CLUB. All Rights Reserved.</p>
+                </div>
+                <div class="developer-credit">
+                    <p>Developed by <a href="https://www.facebook.com/smkafi.live" target="_blank">S.M.KAFI</a> - CSE Batch 14</p>
+                </div>
             </div>
         </div>
     </footer>
