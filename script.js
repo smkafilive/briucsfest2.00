@@ -1,74 +1,67 @@
 // Data for dynamic content
 const eventsData = [
     {
-        date: "🗓️ 09-11-2025",
-        title: "Opening Ceremony",
-        time: "9:00 AM",
-        description: "Join us for the grand opening of BRIU CS FEST 2.0 with special guests, inspiring speeches, and captivating performances.",
+        date: "📅 Day 1 – [9 November]",
+        events: [
+            {
+                time: "10:00-12:00 AM",
+                name: "Opening Ceremony"
+            },
+            {
+                time: "12:00 PM-1:00 PM",
+                name: "Art Olympiad"
+            },
+            {
+                time: "2:00 PM–4:00 PM",
+                name: "Math Olympiad"
+            }
+        ],
         eligibility: "All Participants",
         fee: "FREE",
-        buttonText: "Details and Register",
+        buttonText: "Register for Day 1",
         buttonLink: "#"
     },
     {
-        date: "🗓️ 09-11-2025",
-        title: "Art Competition",
-        time: "11:00 AM",
-        description: "Showcase your creativity in our digital art competition. Unleash your imagination and win exciting prizes.",
-        eligibility: "For Class 1-5 Students",
-        fee: "FREE",
-        buttonText: "Details and Register",
+        date: "📅 Day 2 – [10 November]",
+        events: [
+            {
+                time: "10:00 AM-12:00 PM",
+                name: "ICT Olympiad"
+            },
+            {
+                time: "12:00 PM-4:00 PM",
+                name: "Free Fire Grand Finale"
+            },
+            {
+                time: "4:30 PM",
+                name: "Prize Giving Ceremony"
+            }
+        ],
+        eligibility: "Class 11-12 & Team Contest",
+        fee: "ICT Olympiad: BDT 100, Free Fire: FREE",
+        buttonText: "Register for Day 2",
         buttonLink: "#"
     },
     {
-        date: "🗓️ 09-11-2025",
-        title: "Math Olympiad",
-        time: "10:00 AM",
-        description: "Challenge your mathematical skills in this competitive event. Solve complex problems and showcase your analytical thinking.",
-        eligibility: "For Class 6-8 Students",
-        fee: "BDT 100 tk",
-        buttonText: "Details and Register",
-        buttonLink: "https://forms.gle/kinvBvVtkMMq7D8V6"
-    },
-    {
-        date: "🗓️ 10-11-2025",
-        title: "ICT Olympiad",
-        time: "10:00 AM",
-        description: "Test your knowledge in information and communication technologies. Challenge yourself and prove your expertise.",
-        eligibility: "For Class 11-12 Students",
-        fee: "BDT 100 tk",
-        buttonText: "Details and Register",
-        buttonLink: "https://forms.gle/8NqtXKnR3SZ16yfy7"
-    },
-    {
-        date: "🗓️ 10-11-2025",
-        title: "Gaming Contest - Free Fire",
-        time: "4:00 PM",
-        description: "Compete in Free Fire team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
-        eligibility: "Team Contest",
-        fee: "FREE",
-        buttonText: "Details and Register",
-        buttonLink: "https://www.freefire.com"
-    },
-    {
-        date: "🗓️ 11-11-2025",
-        title: "Gaming Contest - PUBG",
-        time: "10:00 AM",
-        description: "Compete in PUBG team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
-        eligibility: "Team Contest",
-        fee: "FREE",
-        buttonText: "Details and Register",
-        buttonLink: "https://www.pubg.com"
-    },
-    {
-        date: "🗓️ 11-11-2025",
-        title: "AI Photography Contest",
-        time: "2:00 PM",
-        description: "Combine AI and photography in this innovative competition. Create stunning visuals with the help of artificial intelligence.",
+        date: "📅 Day 3 – [11 November]",
+        events: [
+            {
+                time: "10:00 AM-11:00 AM",
+                name: "AI Photography"
+            },
+            {
+                time: "11:30 AM-3:30 PM",
+                name: "PUBG Mobile Grand Finale"
+            },
+            {
+                time: "3:30 PM",
+                name: "Final Prize Giving Ceremony"
+            }
+        ],
         eligibility: "College & University Students",
         fee: "FREE",
-        buttonText: "Details and Register",
-        buttonLink: "https://www.aiphoto.com"
+        buttonText: "Register for Day 3",
+        buttonLink: "#"
     }
 ];
 
@@ -228,23 +221,34 @@ function initCodingRain() {
 function loadEvents() {
     const eventsGrid = document.querySelector('.events-grid');
     
-    eventsData.forEach(event => {
+    eventsData.forEach(day => {
         const eventCard = document.createElement('div');
         eventCard.className = 'event-card';
+        
+        let eventsHTML = '';
+        day.events.forEach(event => {
+            eventsHTML += `
+                <div class="event-item">
+                    <div class="event-time">${event.time}</div>
+                    <div class="event-name">${event.name}</div>
+                </div>
+            `;
+        });
+        
         eventCard.innerHTML = `
             <div class="event-header">
-                <div class="event-date">${event.date}</div>
+                <div class="event-date">${day.date}</div>
             </div>
             <div class="event-content">
-                <h3 class="event-title">${event.title}</h3>
-                <div class="event-time">${event.time}</div>
-                <p class="event-description">${event.description}</p>
+                <div class="event-schedule">
+                    ${eventsHTML}
+                </div>
                 <div class="event-details">
-                    <div class="event-eligibility">Eligibility: ${event.eligibility}</div>
-                    <div class="event-fee">Registration Fee: ${event.fee}</div>
+                    <div class="event-eligibility">Eligibility: ${day.eligibility}</div>
+                    <div class="event-fee">Registration Fee: ${day.fee}</div>
                 </div>
                 <div class="event-actions">
-                    <a href="${event.buttonLink}" target="_blank" class="btn">${event.buttonText}</a>
+                    <a href="${day.buttonLink}" target="_blank" class="btn">${day.buttonText}</a>
                 </div>
             </div>
         `;
