@@ -255,10 +255,11 @@ ul {
 }
 
 .hero .powered-by {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
     color: var(--accent);
+    font-weight: 600;
 }
 
 .hero p {
@@ -405,7 +406,7 @@ ul {
 
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
 
@@ -448,45 +449,56 @@ ul {
 .event-date {
     font-weight: 600;
     color: var(--accent);
+    font-size: 1.1rem;
 }
 
 .event-content {
     padding: 20px;
 }
 
-.event-title {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+.event-schedule {
+    margin-bottom: 20px;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-item:last-child {
+    border-bottom: none;
 }
 
 .event-time {
-    color: var(--accent);
     font-weight: 600;
-    margin-bottom: 10px;
+    color: var(--accent);
+    min-width: 140px;
 }
 
-.event-description {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+.event-name {
+    flex: 1;
+    font-weight: 500;
 }
 
 .event-details {
     background: rgba(131, 153, 162, 0.1);
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
 .event-eligibility {
     font-weight: 600;
-    color: var(--accent);
     margin-bottom: 5px;
+    color: var(--primary-text);
 }
 
 .event-fee {
     font-weight: 600;
-    color: var(--red-accent);
+    color: var(--primary-text);
 }
 
 .event-actions {
@@ -556,28 +568,6 @@ ul {
 .highlight-description {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
-}
-
-/* Registration Section */
-.registration {
-    background: linear-gradient(135deg, #0a2139, #0d2b4d);
-    text-align: center;
-}
-
-.registration-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.registration h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.registration p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
 }
 
 /* Contact Section */
@@ -720,6 +710,15 @@ ul {
     .about-stats {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    
+    .event-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .event-time {
+        margin-bottom: 5px;
     }
 }
 
