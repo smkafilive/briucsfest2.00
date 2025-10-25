@@ -3,6 +3,7 @@
     --primary-text: #ffffff;
     --accent: #8399a2;
     --accent-light: #a8bcc5;
+    --red-accent: #ff3333;
     --card-bg: rgba(255, 255, 255, 0.05);
     --transition: all 0.3s ease;
 }
@@ -106,31 +107,9 @@ ul {
     box-shadow: 0 5px 15px rgba(131, 153, 162, 0.3);
 }
 
-.btn-outline {
-    background: transparent;
-    border: 2px solid var(--primary-text);
-    color: var(--primary-text);
-}
-
-.btn-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Blinking 2.0 effect */
-.blink-2 {
-    animation: blink 1s infinite;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.5);
-}
-
-@keyframes blink {
-    0%, 50% {
-        color: #ff0000;
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.5);
-    }
-    51%, 100% {
-        color: #ffffff;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-    }
+/* Red text for 2.0 */
+.red-text {
+    color: var(--red-accent);
 }
 
 /* Navbar */
@@ -271,8 +250,15 @@ ul {
 
 .hero h1 {
     font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero .powered-by {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: var(--accent);
 }
 
 .hero p {
@@ -293,14 +279,15 @@ ul {
 .countdown-timer {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .countdown-item {
     background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
-    min-width: 80px;
+    min-width: 70px;
     transition: var(--transition);
     backdrop-filter: blur(5px);
 }
@@ -311,12 +298,12 @@ ul {
 }
 
 .countdown-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
 .countdown-label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     opacity: 0.8;
 }
 
@@ -472,16 +459,34 @@ ul {
     margin-bottom: 10px;
 }
 
+.event-time {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
 .event-description {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     margin-bottom: 15px;
 }
 
-.event-time {
-    color: var(--accent);
+.event-details {
+    background: rgba(131, 153, 162, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.event-eligibility {
     font-weight: 600;
-    margin-bottom: 10px;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.event-fee {
+    font-weight: 600;
+    color: var(--red-accent);
 }
 
 .event-actions {
@@ -654,10 +659,7 @@ ul {
 }
 
 .developer-credit {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.5s ease;
-    animation: pulse 2s infinite;
+    font-size: 0.9rem;
 }
 
 .developer-credit a {
@@ -667,21 +669,6 @@ ul {
 
 .developer-credit a:hover {
     color: white;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        text-shadow: 0 0 5px rgba(131, 153, 162, 0.5);
-    }
-    50% {
-        transform: scale(1.05);
-        text-shadow: 0 0 15px rgba(131, 153, 162, 0.8);
-    }
-    100% {
-        transform: scale(1);
-        text-shadow: 0 0 5px rgba(131, 153, 162, 0.5);
-    }
 }
 
 /* Responsive Design */
