@@ -1,49 +1,60 @@
 // Data for dynamic content
 const eventsData = [
     {
-        date: "🗓️ October 27",
+        date: "🗓️ 09-11-2025",
         title: "Opening Ceremony",
-        description: "Join us for the grand opening of BRIU CS FEST 2.0 with special guests, inspiring speeches, and captivating performances."
+        time: "9:00 AM",
+        description: "Join us for the grand opening of BRIU CS FEST 2.0 with special guests, inspiring speeches, and captivating performances.",
+        buttonText: "Details and Register",
+        buttonLink: "#"
     },
     {
-        date: "🗓️ October 27",
+        date: "🗓️ 09-11-2025",
         title: "Art Competition",
-        description: "Showcase your creativity in our digital art competition. Unleash your imagination and win exciting prizes."
+        time: "11:00 AM",
+        description: "Showcase your creativity in our digital art competition. For students of class 1-5. Unleash your imagination and win exciting prizes.",
+        buttonText: "Details and Register",
+        buttonLink: "#"
     },
     {
-        date: "🗓️ October 27",
-        title: "ICT Olympiad",
-        description: "Test your knowledge in information and communication technologies. Challenge yourself and prove your expertise."
-    },
-    {
-        date: "🗓️ October 28",
+        date: "🗓️ 09-11-2025",
         title: "Math Olympiad",
-        description: "Challenge your mathematical skills in this competitive event. Solve complex problems and showcase your analytical thinking."
+        time: "10:00 AM",
+        description: "Challenge your mathematical skills in this competitive event. For students of class 6-8. Solve complex problems and showcase your analytical thinking.",
+        buttonText: "Details and Register",
+        buttonLink: "https://forms.gle/kinvBvVtkMMq7D8V6"
     },
     {
-        date: "🗓️ October 28",
+        date: "🗓️ 10-11-2025",
+        title: "ICT Olympiad",
+        time: "10:00 AM",
+        description: "Test your knowledge in information and communication technologies. For students of class 11 and 12. Challenge yourself and prove your expertise.",
+        buttonText: "Details and Register",
+        buttonLink: "https://forms.gle/8NqtXKnR3SZ16yfy7"
+    },
+    {
+        date: "🗓️ 10-11-2025",
+        title: "Gaming Contest - Free Fire",
+        time: "4:00 PM",
+        description: "Compete in Free Fire team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
+        buttonText: "Details and Register",
+        buttonLink: "https://www.freefire.com"
+    },
+    {
+        date: "🗓️ 11-11-2025",
+        title: "Gaming Contest - PUBG",
+        time: "10:00 AM",
+        description: "Compete in PUBG team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
+        buttonText: "Details and Register",
+        buttonLink: "https://www.pubg.com"
+    },
+    {
+        date: "🗓️ 11-11-2025",
         title: "AI Photography Contest",
-        description: "Combine AI and photography in this innovative competition. Create stunning visuals with the help of artificial intelligence."
-    },
-    {
-        date: "🗓️ October 29",
-        title: "Science Project Showcase",
-        description: "Present your innovative science projects to a panel of judges. Demonstrate your research and win recognition."
-    },
-    {
-        date: "🗓️ October 29",
-        title: "Gaming Contest",
-        description: "Compete in various gaming tournaments with exciting prizes. Show off your gaming skills and have fun."
-    },
-    {
-        date: "🗓️ October 29",
-        title: "Line Following Car Contest",
-        description: "Showcase your robotics skills in this autonomous car competition. Build and program your own line-following vehicle."
-    },
-    {
-        date: "🗓️ October 29",
-        title: "Prize Giving Ceremony & Cultural Night",
-        description: "Celebrate the winners and enjoy cultural performances. A night of recognition, entertainment, and celebration."
+        time: "2:00 PM",
+        description: "Combine AI and photography in this innovative competition. For college and university students. Create stunning visuals with the help of artificial intelligence.",
+        buttonText: "Details and Register",
+        buttonLink: "https://www.aiphoto.com"
     }
 ];
 
@@ -75,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initNavbar();
     initCountdown();
-    initScrollAnimations();
     initCodingRain();
     loadEvents();
     loadHighlights();
@@ -146,7 +156,7 @@ function initNavbar() {
 
 // Countdown timer
 function initCountdown() {
-    const eventDate = new Date('October 27, 2024 09:00:00').getTime();
+    const eventDate = new Date('November 9, 2025 10:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
@@ -156,21 +166,24 @@ function initCountdown() {
             document.getElementById('days').textContent = '00';
             document.getElementById('hours').textContent = '00';
             document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
             return;
         }
         
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
         document.getElementById('days').textContent = days.toString().padStart(2, '0');
         document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
         document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
     }
     
-    // Update countdown immediately and then every minute
+    // Update countdown immediately and then every second
     updateCountdown();
-    setInterval(updateCountdown, 60000);
+    setInterval(updateCountdown, 1000);
 }
 
 // Coding Rain Animation
@@ -210,10 +223,10 @@ function loadEvents() {
             </div>
             <div class="event-content">
                 <h3 class="event-title">${event.title}</h3>
+                <div class="event-time">${event.time}</div>
                 <p class="event-description">${event.description}</p>
                 <div class="event-actions">
-                    <a href="#" class="btn btn-outline">Details</a>
-                    <a href="#registration" class="btn">Registration</a>
+                    <a href="${event.buttonLink}" target="_blank" class="btn">${event.buttonText}</a>
                 </div>
             </div>
         `;
@@ -237,25 +250,4 @@ function loadHighlights() {
         `;
         highlightsGrid.appendChild(highlightCard);
     });
-}
-
-// Scroll animations
-function initScrollAnimations() {
-    const developerCredit = document.querySelector('.developer-credit');
-    
-    function checkScroll() {
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        
-        // Show developer credit when near bottom of page
-        if (scrollPosition + windowHeight > documentHeight - 100) {
-            developerCredit.classList.add('visible');
-        } else {
-            developerCredit.classList.remove('visible');
-        }
-    }
-    
-    window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Check on initial load
 }
