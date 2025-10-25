@@ -5,14 +5,18 @@ const eventsData = [
         title: "Opening Ceremony",
         time: "9:00 AM",
         description: "Join us for the grand opening of BRIU CS FEST 2.0 with special guests, inspiring speeches, and captivating performances.",
-        buttonText: "" ,
+        eligibility: "All Participants",
+        fee: "FREE",
+        buttonText: "Details and Register",
         buttonLink: "#"
     },
     {
         date: "🗓️ 09-11-2025",
         title: "Art Competition",
         time: "11:00 AM",
-        description: "Showcase your creativity in our digital art competition. For students of class 1-5. Unleash your imagination and win exciting prizes.",
+        description: "Showcase your creativity in our digital art competition. Unleash your imagination and win exciting prizes.",
+        eligibility: "For Class 1-5 Students",
+        fee: "FREE",
         buttonText: "Details and Register",
         buttonLink: "#"
     },
@@ -20,7 +24,9 @@ const eventsData = [
         date: "🗓️ 09-11-2025",
         title: "Math Olympiad",
         time: "10:00 AM",
-        description: "Challenge your mathematical skills in this competitive event. For students of class 6-8. Solve complex problems and showcase your analytical thinking.",
+        description: "Challenge your mathematical skills in this competitive event. Solve complex problems and showcase your analytical thinking.",
+        eligibility: "For Class 6-8 Students",
+        fee: "BDT 100 tk",
         buttonText: "Details and Register",
         buttonLink: "https://forms.gle/kinvBvVtkMMq7D8V6"
     },
@@ -28,7 +34,9 @@ const eventsData = [
         date: "🗓️ 10-11-2025",
         title: "ICT Olympiad",
         time: "10:00 AM",
-        description: "Test your knowledge in information and communication technologies. For students of class 11 and 12. Challenge yourself and prove your expertise.",
+        description: "Test your knowledge in information and communication technologies. Challenge yourself and prove your expertise.",
+        eligibility: "For Class 11-12 Students",
+        fee: "BDT 100 tk",
         buttonText: "Details and Register",
         buttonLink: "https://forms.gle/8NqtXKnR3SZ16yfy7"
     },
@@ -37,15 +45,18 @@ const eventsData = [
         title: "Gaming Contest - Free Fire",
         time: "4:00 PM",
         description: "Compete in Free Fire team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
+        eligibility: "Team Contest",
+        fee: "FREE",
         buttonText: "Details and Register",
         buttonLink: "https://www.freefire.com"
-        
     },
     {
         date: "🗓️ 11-11-2025",
         title: "Gaming Contest - PUBG",
         time: "10:00 AM",
         description: "Compete in PUBG team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
+        eligibility: "Team Contest",
+        fee: "FREE",
         buttonText: "Details and Register",
         buttonLink: "https://www.pubg.com"
     },
@@ -53,16 +64,10 @@ const eventsData = [
         date: "🗓️ 11-11-2025",
         title: "AI Photography Contest",
         time: "2:00 PM",
-        description: "Combine AI and photography in this innovative competition. For college and university students. Create stunning visuals with the help of artificial intelligence.",
+        description: "Combine AI and photography in this innovative competition. Create stunning visuals with the help of artificial intelligence.",
+        eligibility: "College & University Students",
+        fee: "FREE",
         buttonText: "Details and Register",
-        buttonLink: "https://www.aiphoto.com"
-    },
-     {
-        date: "🗓️ 11-11-2025",
-        title: "Prize Giving Ceremony & Cultural Night",
-        time: "4:00 PM",
-        description: "Celebrate the winners and enjoy cultural performances. A night of recognition, entertainment, and celebration.",
-        buttonText: "",
         buttonLink: "https://www.aiphoto.com"
     }
 ];
@@ -106,7 +111,7 @@ function initNavbar() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
-    const registerButtons = document.querySelectorAll('a[href="#registration"]');
+    const registerButtons = document.querySelectorAll('a[href="#events"]');
 
     // Sticky navbar on scroll
     window.addEventListener('scroll', () => {
@@ -234,6 +239,10 @@ function loadEvents() {
                 <h3 class="event-title">${event.title}</h3>
                 <div class="event-time">${event.time}</div>
                 <p class="event-description">${event.description}</p>
+                <div class="event-details">
+                    <div class="event-eligibility">Eligibility: ${event.eligibility}</div>
+                    <div class="event-fee">Registration Fee: ${event.fee}</div>
+                </div>
                 <div class="event-actions">
                     <a href="${event.buttonLink}" target="_blank" class="btn">${event.buttonText}</a>
                 </div>
