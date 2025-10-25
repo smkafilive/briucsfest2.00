@@ -5,7 +5,7 @@ const eventsData = [
         title: "Opening Ceremony",
         time: "9:00 AM",
         description: "Join us for the grand opening of BRIU CS FEST 2.0 with special guests, inspiring speeches, and captivating performances.",
-        buttonText: "Details and Register",
+        buttonText: "" ,
         buttonLink: "#"
     },
     {
@@ -39,6 +39,7 @@ const eventsData = [
         description: "Compete in Free Fire team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
         buttonText: "Details and Register",
         buttonLink: "https://www.freefire.com"
+        
     },
     {
         date: "🗓️ 11-11-2025",
@@ -54,6 +55,14 @@ const eventsData = [
         time: "2:00 PM",
         description: "Combine AI and photography in this innovative competition. For college and university students. Create stunning visuals with the help of artificial intelligence.",
         buttonText: "Details and Register",
+        buttonLink: "https://www.aiphoto.com"
+    },
+     {
+        date: "🗓️ 11-11-2025",
+        title: "Prize Giving Ceremony & Cultural Night",
+        time: "4:00 PM",
+        description: "Celebrate the winners and enjoy cultural performances. A night of recognition, entertainment, and celebration.",
+        buttonText: "",
         buttonLink: "https://www.aiphoto.com"
     }
 ];
