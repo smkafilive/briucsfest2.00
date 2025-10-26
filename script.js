@@ -7,7 +7,7 @@ const eventsData = [
         description: "Join us for the grand opening of BRIU CS FEST 2.0 with special guests, inspiring speeches, and captivating performances.",
         eligibility: "All Participants",
         fee: "FREE",
-        buttonText: "#",
+        buttonText: "",
         buttonLink: "#"
     },
     {
