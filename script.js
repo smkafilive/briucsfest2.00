@@ -100,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initNavbar();
     initCountdown();
-    initCodingRain();
     loadEvents();
     loadHighlights();
 });
@@ -198,30 +197,6 @@ function initCountdown() {
     // Update countdown immediately and then every second
     updateCountdown();
     setInterval(updateCountdown, 1000);
-}
-
-// Coding Rain Animation
-function initCodingRain() {
-    const codingRain = document.getElementById('codingRain');
-    const characters = '01{}[]()<>;:.,!?@#$%^&*+-=~|/\\abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    
-    // Create multiple rain columns
-    for (let i = 0; i < 50; i++) {
-        const column = document.createElement('div');
-        column.className = 'rain-column';
-        column.style.left = `${Math.random() * 100}%`;
-        column.style.animationDelay = `${Math.random() * 15}s`;
-        column.style.animationDuration = `${10 + Math.random() * 10}s`;
-        
-        // Add random characters to the column
-        let content = '';
-        for (let j = 0; j < 30; j++) {
-            content += characters.charAt(Math.floor(Math.random() * characters.length)) + '<br>';
-        }
-        column.innerHTML = content;
-        
-        codingRain.appendChild(column);
-    }
 }
 
 // Load events dynamically
