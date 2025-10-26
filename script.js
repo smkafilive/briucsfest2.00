@@ -48,7 +48,7 @@ const eventsData = [
         eligibility: "Team Contest",
         fee: "FREE",
         buttonText: "Details and Register",
-        buttonLink: "https://www.freefire.com"
+        buttonLink: "#"
     },
     {
         date: "🗓️ 11-11-2025",
@@ -58,7 +58,7 @@ const eventsData = [
         eligibility: "Team Contest",
         fee: "FREE",
         buttonText: "Details and Register",
-        buttonLink: "https://www.pubg.com"
+        buttonLink: "#"
     },
     {
         date: "🗓️ 11-11-2025",
@@ -68,7 +68,7 @@ const eventsData = [
         eligibility: "College & University Students",
         fee: "FREE",
         buttonText: "Details and Register",
-        buttonLink: "https://www.aiphoto.com"
+        buttonLink: "#"
     }
 ];
 
