@@ -7,23 +7,23 @@ const eventsData = [
         description: "Join us for the grand opening of BRIU CS FEST 2.0 with special guests, inspiring speeches, and captivating performances.",
         eligibility: "All Participants",
         fee: "FREE",
-        buttonText: "Details and Register",
+        buttonText: "#",
         buttonLink: "#"
     },
     {
         date: "🗓️ 09-11-2025",
         title: "Art Competition",
-        time: "11:00 AM",
+        time: "12:00 AM",
         description: "Showcase your creativity in our digital art competition. Unleash your imagination and win exciting prizes.",
         eligibility: "For Class 1-5 Students",
         fee: "FREE",
         buttonText: "Details and Register",
-        buttonLink: "#"
+        buttonLink: "https://forms.gle/m9F6ABLMZz857zn67"
     },
     {
         date: "🗓️ 09-11-2025",
         title: "Math Olympiad",
-        time: "10:00 AM",
+        time: "02:00 PM",
         description: "Challenge your mathematical skills in this competitive event. Solve complex problems and showcase your analytical thinking.",
         eligibility: "For Class 6-8 Students",
         fee: "BDT 100 tk",
@@ -42,34 +42,37 @@ const eventsData = [
     },
     {
         date: "🗓️ 10-11-2025",
-        title: "Gaming Contest - Free Fire",
-        time: "4:00 PM",
+        title: "Gaming Contest - Free Fire Grand Finale",
+        time: "12:01 PM",
         description: "Compete in Free Fire team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
         eligibility: "Team Contest",
         fee: "FREE",
         buttonText: "Details and Register",
         buttonLink: "#"
     },
-    {
-        date: "🗓️ 11-11-2025",
-        title: "Gaming Contest - PUBG",
-        time: "10:00 AM",
-        description: "Compete in PUBG team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
-        eligibility: "Team Contest",
-        fee: "FREE",
-        buttonText: "Details and Register",
-        buttonLink: "#"
-    },
-    {
+
+{
         date: "🗓️ 11-11-2025",
         title: "AI Photography Contest",
-        time: "2:00 PM",
+        time: "10:00 AM",
         description: "Combine AI and photography in this innovative competition. Create stunning visuals with the help of artificial intelligence.",
         eligibility: "College & University Students",
         fee: "FREE",
         buttonText: "Details and Register",
         buttonLink: "#"
+    },
+    
+    {
+        date: "🗓️ 11-11-2025",
+        title: "Gaming Contest - PUBG Mobile",
+        time: "11:30 AM",
+        description: "Compete in PUBG team tournaments with exciting prizes. Show off your gaming skills and have fun with your team.",
+        eligibility: "Team Contest",
+        fee: "FREE",
+        buttonText: "Details and Register",
+        buttonLink: "#"
     }
+    
 ];
 
 const highlightsData = [
