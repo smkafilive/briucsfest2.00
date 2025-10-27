@@ -59,7 +59,7 @@ const eventsData = [
         eligibility: "College & University Students",
         fee: "FREE",
         buttonText: "Details and Register",
-        buttonLink: "#"
+        buttonLink: "https://forms.gle/fwosXJTsLQNnXNCL6"
     },
     
     {
