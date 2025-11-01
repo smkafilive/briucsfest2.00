@@ -13,7 +13,7 @@ const eventsData = [
     {
         date: "🗓️ 09-11-2025",
         title: "Art Competition",
-        time: "12:00 AM",
+        time: "2:00 PM",
         description: "Showcase your creativity in our digital art competition. Unleash your imagination and win exciting prizes.",
         eligibility: "For Class 1-5 Students",
         fee: "FREE",
@@ -23,7 +23,7 @@ const eventsData = [
     {
         date: "🗓️ 09-11-2025",
         title: "Math Olympiad",
-        time: "02:00 PM",
+        time: "10:45 AM",
         description: "Challenge your mathematical skills in this competitive event. Solve complex problems and showcase your analytical thinking.",
         eligibility: "For Class 6-8 Students",
         fee: "BDT 100 tk",
